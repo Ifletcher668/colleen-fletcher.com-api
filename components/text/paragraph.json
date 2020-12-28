@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_text_paragraphs",
+  "info": {
+    "name": "paragraph",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 25000
+    }
+  }
+}

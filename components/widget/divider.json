@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_widget_dividers",
+  "info": {
+    "name": "Divider",
+    "icon": "arrows-alt-h"
+  },
+  "options": {},
+  "attributes": {
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "standard",
+        "fancy"
+      ],
+      "default": "standard",
+      "required": true
+    }
+  }
+}

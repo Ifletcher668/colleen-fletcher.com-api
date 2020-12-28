@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offerings",
+  "info": {
+    "name": "Offering"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 30,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "maxLength": 40
+    },
+    "service": {
+      "via": "offerings",
+      "model": "service"
+    }
+  }
+}

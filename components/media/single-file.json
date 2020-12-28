@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_media_single_file",
+  "info": {
+    "name": "Single File",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": ["files"],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

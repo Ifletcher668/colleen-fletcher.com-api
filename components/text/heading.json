@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_text_headings",
+  "info": {
+    "name": "Heading",
+    "icon": "heading"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "maxLength": 350,
+      "required": true,
+      "minLength": 2
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six"
+      ],
+      "default": "three",
+      "required": true
+    },
+    "tilt": {
+      "type": "enumeration",
+      "enum": [
+        "down",
+        "even",
+        "up"
+      ],
+      "default": "even",
+      "required": true
+    }
+  }
+}

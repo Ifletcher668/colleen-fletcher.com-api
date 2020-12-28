@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_section_text_right_image_lefts",
+  "info": {
+    "name": "Text Right Image Left",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.paragraph",
+      "required": true
+    }
+  }
+}

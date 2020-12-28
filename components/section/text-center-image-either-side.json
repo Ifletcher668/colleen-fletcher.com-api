@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_section_text_center_image_either_sides",
+  "info": {
+    "name": "Text Center Image Either Side",
+    "icon": "x-ray"
+  },
+  "options": {},
+  "attributes": {
+    "image_left": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.paragraph",
+      "required": true
+    },
+    "image_right": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

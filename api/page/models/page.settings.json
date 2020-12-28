@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "name": "Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 200,
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "maxLength": 200
+    },
+    "banner_background_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "banner": {
+      "type": "dynamiczone",
+      "components": [
+        "media.single-video",
+        "media.single-image",
+        "media.videos",
+        "media.images",
+        "media.files",
+        "media.single-file",
+        "text.heading",
+        "text.paragraph",
+        "text.quote",
+        "section.text-right-image-left",
+        "section.text-center-image-either-side",
+        "section.heading-left-image-right",
+        "section.image-right-text-left",
+        "section.image-center-text-either-side",
+        "section.heading-right-image-left",
+        "widget.divider",
+        "widget.button"
+      ],
+      "min": 1,
+      "max": 6,
+      "required": true
+    },
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "media.single-video",
+        "media.single-image",
+        "media.videos",
+        "media.images",
+        "media.files",
+        "media.single-file",
+        "text.heading",
+        "text.paragraph",
+        "text.quote",
+        "section.text-right-image-left",
+        "section.text-center-image-either-side",
+        "section.heading-left-image-right",
+        "section.image-right-text-left",
+        "section.image-center-text-either-side",
+        "section.heading-right-image-left",
+        "widget.divider",
+        "widget.button"
+      ],
+      "required": true,
+      "min": 1
+    },
+    "meta_description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 400,
+      "minLength": 20
+    },
+    "blogs": {
+      "collection": "blog"
+    },
+    "menu_item": {
+      "model": "menu-item",
+      "via": "page"
+    },
+    "offerings": {
+      "collection": "offering"
+    }
+  }
+}

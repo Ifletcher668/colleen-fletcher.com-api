@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_media_single_images",
+  "info": {
+    "name": "Single Image",
+    "icon": "camera"
+  },
+  "options": {},
+  "attributes": {
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

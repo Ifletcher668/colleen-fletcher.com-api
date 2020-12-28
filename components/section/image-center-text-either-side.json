@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_section_image_center_text_either_side_s",
+  "info": {
+    "name": "Image Center Text Either Side ",
+    "icon": "id-card-alt"
+  },
+  "options": {},
+  "attributes": {
+    "text_left": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.paragraph"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "text_right": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.paragraph"
+    }
+  }
+}

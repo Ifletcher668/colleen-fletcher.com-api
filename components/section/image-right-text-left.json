@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_section_image_right_text_lefts",
+  "info": {
+    "name": "Image Right Text Left",
+    "icon": "money-check"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.paragraph",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

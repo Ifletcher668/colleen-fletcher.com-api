@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_media_images",
+  "info": {
+    "name": "Images",
+    "icon": "camera-retro",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": [
+        "straight_line",
+        "stagger",
+        "triangle",
+        "inverted_triangle"
+      ],
+      "required": true,
+      "default": "straight_line"
+    }
+  }
+}

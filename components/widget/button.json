@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_widget_buttons",
+  "info": {
+    "name": "Button",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true,
+      "maxLength": 25
+    },
+    "action": {
+      "type": "string",
+      "maxLength": 2000,
+      "default": "add link",
+      "required": true
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "tertiary"
+      ],
+      "default": "primary",
+      "required": true
+    }
+  }
+}

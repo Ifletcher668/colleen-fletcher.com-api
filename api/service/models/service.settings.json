@@ -86,10 +86,6 @@
       ],
       "required": true,
       "min": 1
-    },
-    "offerings": {
-      "collection": "offering",
-      "via": "service"
     }
   }
 }

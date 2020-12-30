@@ -2,11 +2,12 @@
   "collectionName": "components_text_paragraphs",
   "info": {
     "name": "paragraph",
-    "icon": "align-left"
+    "icon": "align-left",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "text": {
+    "body": {
       "type": "richtext",
       "required": true,
       "maxLength": 25000

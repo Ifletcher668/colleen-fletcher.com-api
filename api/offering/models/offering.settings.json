@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "offerings",
   "info": {
-    "name": "Offering"
+    "name": "Offering",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -21,9 +22,8 @@
       "required": true,
       "maxLength": 40
     },
-    "service": {
-      "via": "offerings",
-      "model": "service"
+    "services": {
+      "collection": "service"
     }
   }
 }

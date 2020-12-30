@@ -2,11 +2,12 @@
   "collectionName": "components_widget_dividers",
   "info": {
     "name": "Divider",
-    "icon": "arrows-alt-h"
+    "icon": "arrows-alt-h",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "variant": {
+    "style": {
       "type": "enumeration",
       "enum": [
         "standard",

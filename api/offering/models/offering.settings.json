@@ -23,7 +23,9 @@
       "maxLength": 40
     },
     "services": {
-      "collection": "service"
+      "collection": "service",
+      "via": "offerings",
+      "dominant": true
     }
   }
 }

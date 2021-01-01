@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "general_settings",
+  "info": {
+    "name": "General Settings"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "blogs_page": {
+      "model": "page"
+    },
+    "home_page": {
+      "model": "page"
+    }
+  }
+}

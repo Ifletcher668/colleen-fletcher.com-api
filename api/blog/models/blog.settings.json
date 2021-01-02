@@ -24,6 +24,11 @@
     "blog_posts": {
       "collection": "blog-post",
       "via": "blog"
+    },
+    "meta_description": {
+      "type": "richtext",
+      "maxLength": 1000,
+      "required": true
     }
   }
 }

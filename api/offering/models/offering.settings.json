@@ -26,6 +26,11 @@
       "collection": "service",
       "via": "offerings",
       "dominant": true
+    },
+    "meta_description": {
+      "type": "richtext",
+      "maxLength": 1000,
+      "required": true
     }
   }
 }

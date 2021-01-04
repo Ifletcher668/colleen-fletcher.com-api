@@ -23,14 +23,19 @@
       "maxLength": 40
     },
     "services": {
-      "collection": "service",
       "via": "offerings",
+      "collection": "service",
       "dominant": true
     },
     "meta_description": {
       "type": "richtext",
       "maxLength": 1000,
       "required": true
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "media.single-image"
     }
   }
 }

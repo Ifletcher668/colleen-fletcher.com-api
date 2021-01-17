@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_collections_offerings",
+  "info": {
+    "name": "Offerings",
+    "icon": "angry",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "offerings": {
+      "collection": "offering"
+    },
+    "show_services": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

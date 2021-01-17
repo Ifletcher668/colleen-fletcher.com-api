@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_collections_services",
+  "info": {
+    "name": "Services",
+    "icon": "ambulance"
+  },
+  "options": {},
+  "attributes": {
+    "services": {
+      "collection": "service"
+    }
+  }
+}

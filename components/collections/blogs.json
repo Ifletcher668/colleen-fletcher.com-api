@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_collections_blogs",
+  "info": {
+    "name": "blogs",
+    "icon": "bread-slice",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "blogs": {
+      "collection": "blog"
+    },
+    "show_blog_posts": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

@@ -76,7 +76,10 @@
         "section.image-center-text-either-side",
         "section.heading-right-image-left",
         "widget.divider",
-        "widget.button"
+        "widget.button",
+        "collections.blog-posts",
+        "collections.offerings",
+        "collections.blogs"
       ],
       "required": true,
       "min": 1
@@ -87,15 +90,9 @@
       "maxLength": 400,
       "minLength": 20
     },
-    "blogs": {
-      "collection": "blog"
-    },
     "menu_item": {
       "model": "menu-item",
       "via": "page"
-    },
-    "offerings": {
-      "collection": "offering"
     }
   }
 }

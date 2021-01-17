@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "menu_items",
   "info": {
-    "name": "Menu Item"
+    "name": "Menu Item",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -35,6 +36,16 @@
     "page": {
       "via": "menu_item",
       "model": "page"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "collections.blog-posts",
+        "collections.offerings",
+        "collections.blogs",
+        "collections.services"
+      ],
+      "max": 3
     }
   }
 }

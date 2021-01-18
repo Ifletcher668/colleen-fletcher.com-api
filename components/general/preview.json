@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_general_previews",
+  "info": {
+    "name": "preview",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.heading",
+      "required": false
+    },
+    "text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text.paragraph"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "media.single-image"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "widget.button"
+    }
+  }
+}

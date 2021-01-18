@@ -29,6 +29,11 @@
       "type": "richtext",
       "maxLength": 1000,
       "required": true
+    },
+    "preview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.preview"
     }
   }
 }

@@ -32,10 +32,11 @@
       "maxLength": 1000,
       "required": true
     },
-    "image": {
+    "preview": {
       "type": "component",
       "repeatable": false,
-      "component": "media.single-image"
+      "component": "general.preview",
+      "required": false
     }
   }
 }

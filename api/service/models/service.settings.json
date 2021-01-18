@@ -1,97 +1,94 @@
 {
-    "kind": "collectionType",
-    "collectionName": "services",
-    "info": {
-        "name": "Service",
-        "description": ""
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Service",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 75
     },
-    "options": {
-        "increments": true,
-        "timestamps": true,
-        "draftAndPublish": true
+    "banner_background_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
     },
-    "attributes": {
-        "title": {
-            "type": "string",
-            "required": true,
-            "maxLength": 75
-        },
-        "banner_background_image": {
-            "model": "file",
-            "via": "related",
-            "allowedTypes": ["images", "videos"],
-            "plugin": "upload",
-            "required": true
-        },
-        "banner": {
-            "type": "dynamiczone",
-            "components": [
-                "media.single-video",
-                "media.single-image",
-                "media.videos",
-                "media.images",
-                "media.files",
-                "media.single-file",
-                "text.heading",
-                "text.paragraph",
-                "text.quote",
-                "section.text-right-image-left",
-                "section.text-center-image-either-side",
-                "section.heading-left-image-right",
-                "section.image-right-text-left",
-                "section.image-center-text-either-side",
-                "section.heading-right-image-left",
-                "widget.divider",
-                "widget.button"
-            ],
-            "required": true,
-            "max": 6,
-            "min": 1
-        },
-        "preview": {
-            "type": "richtext",
-            "default": "add a brief description of the service",
-            "required": true,
-            "maxLength": 20000
-        },
-        "preview_image": {
-            "type": "component",
-            "repeatable": false,
-            "component": "media.single-image"
-        },
-        "slug": {
-            "type": "uid",
-            "targetField": "title",
-            "required": true,
-            "maxLength": 90
-        },
-        "sales_page": {
-            "type": "dynamiczone",
-            "components": [
-                "media.single-video",
-                "media.single-image",
-                "media.videos",
-                "media.images",
-                "media.files",
-                "media.single-file",
-                "text.heading",
-                "text.paragraph",
-                "text.quote",
-                "section.text-right-image-left",
-                "section.text-center-image-either-side",
-                "section.heading-left-image-right",
-                "section.image-right-text-left",
-                "section.image-center-text-either-side",
-                "section.heading-right-image-left",
-                "widget.divider",
-                "widget.button"
-            ],
-            "required": true,
-            "min": 1
-        },
-        "offerings": {
-            "collection": "offering",
-            "via": "services"
-        }
+    "banner": {
+      "type": "dynamiczone",
+      "components": [
+        "media.single-video",
+        "media.single-image",
+        "media.videos",
+        "media.images",
+        "media.files",
+        "media.single-file",
+        "text.heading",
+        "text.paragraph",
+        "text.quote",
+        "section.text-right-image-left",
+        "section.text-center-image-either-side",
+        "section.heading-left-image-right",
+        "section.image-right-text-left",
+        "section.image-center-text-either-side",
+        "section.heading-right-image-left",
+        "widget.divider",
+        "widget.button"
+      ],
+      "required": true,
+      "max": 6,
+      "min": 1
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "maxLength": 90
+    },
+    "sales_page": {
+      "type": "dynamiczone",
+      "components": [
+        "media.single-video",
+        "media.single-image",
+        "media.videos",
+        "media.images",
+        "media.files",
+        "media.single-file",
+        "text.heading",
+        "text.paragraph",
+        "text.quote",
+        "section.text-right-image-left",
+        "section.text-center-image-either-side",
+        "section.heading-left-image-right",
+        "section.image-right-text-left",
+        "section.image-center-text-either-side",
+        "section.heading-right-image-left",
+        "widget.divider",
+        "widget.button"
+      ],
+      "required": true,
+      "min": 1
+    },
+    "offerings": {
+      "collection": "offering",
+      "via": "services"
+    },
+    "preview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.preview"
     }
+  }
 }

@@ -30,7 +30,7 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true
+      "required": false
     },
     "banner": {
       "type": "dynamiczone",
@@ -79,7 +79,8 @@
         "widget.button",
         "collections.blog-posts",
         "collections.offerings",
-        "collections.blogs"
+        "collections.blogs",
+        "collections.services"
       ],
       "required": true,
       "min": 1

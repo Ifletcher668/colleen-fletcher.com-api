@@ -14,7 +14,7 @@ const Editor = ({onChange, name, value}) => {
                 {indent: '-1'},
                 {indent: '+1'},
             ],
-            // ['link', 'image', 'video'],
+            ['link'],
             ['clean'],
         ],
         clipboard: {

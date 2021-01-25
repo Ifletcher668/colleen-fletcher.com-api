@@ -15,8 +15,7 @@
     "action": {
       "type": "string",
       "maxLength": 2000,
-      "default": "add link (if you don't know, just add a /)",
-      "required": true
+      "required": false
     },
     "variant": {
       "type": "enumeration",

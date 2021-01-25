@@ -1,31 +1,36 @@
 {
-  "kind": "collectionType",
-  "collectionName": "tags",
-  "info": {
-    "name": "Tag",
-    "description": ""
-  },
-  "options": {
-    "increments": true,
-    "timestamps": true,
-    "draftAndPublish": false
-  },
-  "attributes": {
-    "name": {
-      "type": "string",
-      "required": true,
-      "maxLength": 100
+    "kind": "collectionType",
+    "collectionName": "tags",
+    "info": {
+        "name": "Tag",
+        "description": ""
     },
-    "blog_posts": {
-      "collection": "blog-post",
-      "via": "tags",
-      "dominant": true
+    "options": {
+        "increments": true,
+        "timestamps": true,
+        "draftAndPublish": false
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name",
-      "maxLength": 150,
-      "required": true
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true,
+            "maxLength": 100
+        },
+        "blog_posts": {
+            "collection": "blog-post",
+            "via": "tags",
+            "dominant": true
+        },
+        "slug": {
+            "type": "uid",
+            "targetField": "name",
+            "maxLength": 150,
+            "required": true
+        },
+        "is_tag": {
+            "type": "boolean",
+            "default": true,
+            "required": false
+        }
     }
-  }
 }

@@ -27,6 +27,11 @@
             "required": true,
             "maxLength": 125,
             "minLength": 2
+        },
+        "is_category": {
+            "type": "boolean",
+            "default": true,
+            "required": false
         }
     }
 }

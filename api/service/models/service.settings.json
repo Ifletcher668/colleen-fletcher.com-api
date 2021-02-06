@@ -26,7 +26,7 @@
             "via": "related",
             "allowedTypes": ["images", "videos"],
             "plugin": "upload",
-            "required": true
+            "required": false
         },
         "banner": {
             "type": "dynamiczone",
@@ -49,9 +49,8 @@
                 "widget.divider",
                 "widget.button"
             ],
-            "required": true,
-            "max": 6,
-            "min": 1
+            "required": false,
+            "max": 6
         },
         "slug": {
             "type": "uid",

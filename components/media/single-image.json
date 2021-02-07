@@ -17,6 +17,11 @@
             "type": "boolean",
             "default": false,
             "required": false
+        },
+        "has_border": {
+            "type": "boolean",
+            "default": true,
+            "required": false
         }
     }
 }

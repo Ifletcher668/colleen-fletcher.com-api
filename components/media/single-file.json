@@ -13,11 +13,6 @@
             "allowedTypes": ["files"],
             "plugin": "upload",
             "required": true
-        },
-        "is_circle": {
-            "type": "boolean",
-            "default": false,
-            "required": false
         }
     }
 }

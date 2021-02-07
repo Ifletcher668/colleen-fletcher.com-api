@@ -1,26 +1,21 @@
 {
-  "collectionName": "components_section_heading_left_image_rights",
-  "info": {
-    "name": "Heading Left Image Right",
-    "icon": "caret-left"
-  },
-  "options": {},
-  "attributes": {
-    "heading": {
-      "type": "component",
-      "repeatable": false,
-      "component": "text.heading",
-      "required": true
+    "collectionName": "components_section_heading_left_image_rights",
+    "info": {
+        "name": "Heading Left Image Right",
+        "icon": "caret-left"
     },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true
+    "options": {},
+    "attributes": {
+        "heading": {
+            "type": "component",
+            "repeatable": false,
+            "component": "text.heading",
+            "required": true
+        },
+        "image": {
+            "type": "component",
+            "repeatable": false,
+            "component": "media.single-image"
+        }
     }
-  }
 }

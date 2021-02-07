@@ -2,25 +2,21 @@
   "collectionName": "components_section_heading_right_image_lefts",
   "info": {
     "name": "Heading Right Image Left",
-    "icon": "caret-right"
+    "icon": "caret-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true
-    },
     "heading": {
       "type": "component",
       "repeatable": false,
       "component": "text.heading",
       "required": true
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "media.single-image"
     }
   }
 }

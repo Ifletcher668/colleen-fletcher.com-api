@@ -1,26 +1,21 @@
 {
-  "collectionName": "components_section_text_right_image_lefts",
-  "info": {
-    "name": "Text Right Image Left",
-    "icon": "address-card"
-  },
-  "options": {},
-  "attributes": {
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true
+    "collectionName": "components_section_text_right_image_lefts",
+    "info": {
+        "name": "Text Right Image Left",
+        "icon": "address-card"
     },
-    "text": {
-      "type": "component",
-      "repeatable": false,
-      "component": "text.paragraph",
-      "required": true
+    "options": {},
+    "attributes": {
+        "image": {
+            "type": "component",
+            "repeatable": false,
+            "component": "media.single-image"
+        },
+        "text": {
+            "type": "component",
+            "repeatable": false,
+            "component": "text.paragraph",
+            "required": true
+        }
     }
-  }
 }

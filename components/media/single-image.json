@@ -11,7 +11,7 @@
             "via": "related",
             "allowedTypes": ["images"],
             "plugin": "upload",
-            "required": true
+            "required": false
         },
         "is_circle": {
             "type": "boolean",

@@ -1,22 +1,22 @@
 {
-  "collectionName": "components_section_heading_right_image_lefts",
-  "info": {
-    "name": "Heading Right Image Left",
-    "icon": "caret-right",
-    "description": ""
-  },
-  "options": {},
-  "attributes": {
-    "heading": {
-      "type": "component",
-      "repeatable": false,
-      "component": "text.heading",
-      "required": true
+    "collectionName": "components_section_heading_right_image_lefts",
+    "info": {
+        "name": "Heading Right Image Left",
+        "icon": "caret-right",
+        "description": ""
     },
-    "image": {
-      "type": "component",
-      "repeatable": false,
-      "component": "media.single-image"
+    "options": {},
+    "attributes": {
+        "heading": {
+            "type": "component",
+            "repeatable": false,
+            "component": "text.heading",
+            "required": true
+        },
+        "image": {
+            "type": "component",
+            "repeatable": false,
+            "component": "media.single-image"
+        }
     }
-  }
 }

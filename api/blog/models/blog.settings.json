@@ -1,44 +1,44 @@
 {
-    "kind": "collectionType",
-    "collectionName": "blogs",
-    "info": {
-        "name": "Blog",
-        "description": ""
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "name": "Blog",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 150,
+      "required": true
     },
-    "options": {
-        "increments": true,
-        "timestamps": true,
-        "draftAndPublish": false
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 150
     },
-    "attributes": {
-        "name": {
-            "type": "string",
-            "maxLength": 150,
-            "required": true
-        },
-        "slug": {
-            "type": "uid",
-            "required": true,
-            "maxLength": 150
-        },
-        "preview": {
-            "type": "component",
-            "repeatable": false,
-            "component": "general.preview"
-        },
-        "blog_posts": {
-            "collection": "blog-post",
-            "via": "blog"
-        },
-        "meta_description": {
-            "type": "richtext",
-            "maxLength": 1000,
-            "required": true
-        },
-        "is_blog": {
-            "type": "boolean",
-            "default": true,
-            "required": false
-        }
+    "preview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.preview"
+    },
+    "blog_posts": {
+      "via": "blog",
+      "collection": "blog-post"
+    },
+    "meta_description": {
+      "type": "richtext",
+      "maxLength": 1000,
+      "required": true
+    },
+    "is_blog": {
+      "type": "boolean",
+      "default": true,
+      "required": false
     }
+  }
 }

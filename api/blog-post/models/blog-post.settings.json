@@ -83,6 +83,10 @@
       "type": "component",
       "repeatable": false,
       "component": "general.preview"
+    },
+    "meta_description": {
+      "type": "text",
+      "maxLength": 500
     }
   }
 }

@@ -1,95 +1,102 @@
 {
-    "kind": "collectionType",
-    "collectionName": "services",
-    "info": {
-        "name": "Service",
-        "description": ""
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Service",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 75
     },
-    "options": {
-        "increments": true,
-        "timestamps": true,
-        "draftAndPublish": true
+    "preview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.preview"
     },
-    "attributes": {
-        "title": {
-            "type": "string",
-            "required": true,
-            "maxLength": 75
-        },
-        "preview": {
-            "type": "component",
-            "repeatable": false,
-            "component": "general.preview"
-        },
-        "banner_background_image": {
-            "model": "file",
-            "via": "related",
-            "allowedTypes": ["images", "videos"],
-            "plugin": "upload",
-            "required": false
-        },
-        "banner": {
-            "type": "dynamiczone",
-            "components": [
-                "media.single-video",
-                "media.single-image",
-                "media.videos",
-                "media.images",
-                "media.files",
-                "media.single-file",
-                "text.heading",
-                "text.paragraph",
-                "text.quote",
-                "section.text-right-image-left",
-                "section.text-center-image-either-side",
-                "section.heading-left-image-right",
-                "section.image-right-text-left",
-                "section.image-center-text-either-side",
-                "section.heading-right-image-left",
-                "widget.divider",
-                "widget.button"
-            ],
-            "required": false,
-            "max": 6
-        },
-        "slug": {
-            "type": "uid",
-            "targetField": "title",
-            "required": true,
-            "maxLength": 90
-        },
-        "sales_page": {
-            "type": "dynamiczone",
-            "components": [
-                "media.single-video",
-                "media.single-image",
-                "media.videos",
-                "media.images",
-                "media.files",
-                "media.single-file",
-                "text.heading",
-                "text.paragraph",
-                "text.quote",
-                "section.text-right-image-left",
-                "section.text-center-image-either-side",
-                "section.heading-left-image-right",
-                "section.image-right-text-left",
-                "section.image-center-text-either-side",
-                "section.heading-right-image-left",
-                "widget.divider",
-                "widget.button"
-            ],
-            "required": true,
-            "min": 1
-        },
-        "offerings": {
-            "collection": "offering",
-            "via": "services"
-        },
-        "is_service": {
-            "type": "boolean",
-            "default": true,
-            "required": false
-        }
+    "banner_background_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "banner": {
+      "type": "dynamiczone",
+      "components": [
+        "media.single-video",
+        "media.single-image",
+        "media.videos",
+        "media.images",
+        "media.files",
+        "media.single-file",
+        "text.heading",
+        "text.paragraph",
+        "text.quote",
+        "section.text-right-image-left",
+        "section.text-center-image-either-side",
+        "section.heading-left-image-right",
+        "section.image-right-text-left",
+        "section.image-center-text-either-side",
+        "section.heading-right-image-left",
+        "widget.divider",
+        "widget.button"
+      ],
+      "required": false,
+      "max": 6
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true,
+      "maxLength": 90
+    },
+    "sales_page": {
+      "type": "dynamiczone",
+      "components": [
+        "media.single-video",
+        "media.single-image",
+        "media.videos",
+        "media.images",
+        "media.files",
+        "media.single-file",
+        "text.heading",
+        "text.paragraph",
+        "text.quote",
+        "section.text-right-image-left",
+        "section.text-center-image-either-side",
+        "section.heading-left-image-right",
+        "section.image-right-text-left",
+        "section.image-center-text-either-side",
+        "section.heading-right-image-left",
+        "widget.divider",
+        "widget.button"
+      ],
+      "required": true,
+      "min": 1
+    },
+    "offerings": {
+      "via": "services",
+      "collection": "offering"
+    },
+    "is_service": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "meta_description": {
+      "type": "text",
+      "maxLength": 500
     }
+  }
 }

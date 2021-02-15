@@ -22,6 +22,16 @@
             "type": "boolean",
             "default": true,
             "required": false
+        },
+        "justify": {
+            "type": "enumeration",
+            "enum": ["left", "center", "right"],
+            "default": "left"
+        },
+        "align": {
+            "type": "enumeration",
+            "enum": ["top", "center", "bottom"],
+            "default": "center"
         }
     }
 }

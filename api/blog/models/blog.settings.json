@@ -30,15 +30,14 @@
       "via": "blog",
       "collection": "blog-post"
     },
-    "meta_description": {
-      "type": "richtext",
-      "maxLength": 1000,
-      "required": true
-    },
     "is_blog": {
       "type": "boolean",
       "default": true,
       "required": false
+    },
+    "meta_description": {
+      "type": "text",
+      "maxLength": 500
     }
   }
 }

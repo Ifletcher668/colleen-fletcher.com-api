@@ -36,7 +36,6 @@
       "components": [
         "media.single-video",
         "media.single-image",
-        "media.videos",
         "media.images",
         "media.files",
         "media.single-file",
@@ -86,8 +85,8 @@
       "min": 1
     },
     "offerings": {
-      "via": "services",
-      "collection": "offering"
+      "collection": "offering",
+      "via": "services"
     },
     "is_service": {
       "type": "boolean",

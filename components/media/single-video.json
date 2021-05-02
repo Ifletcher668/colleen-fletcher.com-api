@@ -1,20 +1,19 @@
 {
-  "collectionName": "components_media_single_video",
-  "info": {
-    "name": "Single Video",
-    "description": "",
-    "icon": "film"
-  },
-  "options": {},
-  "attributes": {
-    "file": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": true
+    "collectionName": "components_media_single_video",
+    "info": {
+        "name": "Single Video",
+        "description": "Upload a url and title to a YouTube video",
+        "icon": "film"
+    },
+    "options": {},
+    "attributes": {
+        "srcURL": {
+            "type": "string",
+            "required": true
+        },
+        "title": {
+            "type": "string",
+            "required": true
+        }
     }
-  }
 }

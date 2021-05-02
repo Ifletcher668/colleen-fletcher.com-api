@@ -29,8 +29,8 @@
       "required": false
     },
     "services": {
-      "collection": "service",
       "via": "offerings",
+      "collection": "service",
       "dominant": true
     },
     "is_offering": {

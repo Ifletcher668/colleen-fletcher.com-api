@@ -37,7 +37,6 @@
       "components": [
         "media.single-video",
         "media.single-image",
-        "media.videos",
         "media.images",
         "media.files",
         "media.single-file",
@@ -61,7 +60,6 @@
       "components": [
         "media.single-video",
         "media.single-image",
-        "media.videos",
         "media.images",
         "media.files",
         "media.single-file",
@@ -91,8 +89,8 @@
       "minLength": 20
     },
     "menu_item": {
-      "via": "page",
-      "model": "menu-item"
+      "model": "menu-item",
+      "via": "page"
     }
   }
 }

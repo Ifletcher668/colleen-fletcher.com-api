@@ -43,7 +43,6 @@
       "components": [
         "media.single-video",
         "media.single-image",
-        "media.videos",
         "media.images",
         "media.files",
         "media.single-file",

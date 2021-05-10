@@ -1,0 +1,14 @@
+{
+    "collectionName": "components_widget_embedded_forms",
+    "info": {
+        "name": "EmbeddedForm",
+        "icon": "code"
+    },
+    "options": {},
+    "attributes": {
+        "code_snippet": {
+            "type": "text",
+            "required": true
+        }
+    }
+}

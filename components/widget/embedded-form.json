@@ -9,6 +9,11 @@
         "code_snippet": {
             "type": "text",
             "required": true
+        },
+        "justify": {
+            "type": "enumeration",
+            "enum": ["left", "center", "right"],
+            "default": "center"
         }
     }
 }

@@ -61,8 +61,8 @@
             "min": 1
         },
         "blog": {
-            "model": "blog",
-            "via": "blog_posts"
+            "via": "blog_posts",
+            "model": "blog"
         },
         "category": {
             "model": "category",
@@ -82,9 +82,11 @@
             "repeatable": false,
             "component": "general.preview"
         },
-        "meta_description": {
-            "type": "text",
-            "maxLength": 500
+        "seo": {
+            "type": "component",
+            "repeatable": false,
+            "component": "general.seo",
+            "required": false
         }
     }
 }

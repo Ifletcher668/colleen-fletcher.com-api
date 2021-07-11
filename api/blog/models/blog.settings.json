@@ -35,9 +35,11 @@
       "default": true,
       "required": false
     },
-    "meta_description": {
-      "type": "text",
-      "maxLength": 500
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.seo",
+      "required": true
     }
   }
 }

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_general_seos",
+  "info": {
+    "name": "SEO",
+    "icon": "search-dollar"
+  },
+  "options": {},
+  "attributes": {
+    "meta_description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 160
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

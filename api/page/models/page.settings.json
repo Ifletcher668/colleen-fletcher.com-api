@@ -80,11 +80,11 @@
             "required": true,
             "min": 1
         },
-        "meta_description": {
-            "type": "text",
-            "required": true,
-            "maxLength": 400,
-            "minLength": 20
+        "seo": {
+            "type": "component",
+            "repeatable": false,
+            "component": "general.seo",
+            "required": false
         },
         "menu_item": {
             "model": "menu-item",

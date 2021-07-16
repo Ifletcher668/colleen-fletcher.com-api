@@ -13,25 +13,11 @@
             "plugin": "upload",
             "required": false
         },
-        "is_circle": {
-            "type": "boolean",
-            "default": false,
+        "configuration": {
+            "type": "component",
+            "repeatable": false,
+            "component": "general.image-configuration",
             "required": false
-        },
-        "has_border": {
-            "type": "boolean",
-            "default": true,
-            "required": false
-        },
-        "justify": {
-            "type": "enumeration",
-            "enum": ["left", "center", "right"],
-            "default": "left"
-        },
-        "align": {
-            "type": "enumeration",
-            "enum": ["top", "center", "bottom"],
-            "default": "center"
         }
     }
 }

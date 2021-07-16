@@ -1,0 +1,43 @@
+{
+    "collectionName": "components_general_image_configurations",
+    "info": {
+        "name": "Image Configuration",
+        "icon": ""
+    },
+    "options": {},
+    "attributes": {
+      "width": {
+        "type":"integer",
+        "required":false,
+        "default":666,
+        "min":0
+      },
+      "height": {
+        "type":"integer",
+        "required":false,
+        "default":666,
+        "min":0
+      },
+        "is_circle": {
+            "type": "boolean",
+            "default": false,
+            "required": false
+        },
+        "has_border": {
+            "type": "boolean",
+            "default": true,
+            "required": false
+        },
+        "justify": {
+            "type": "enumeration",
+            "enum": ["left", "center", "right"],
+            "default": "left"
+        },
+        "align": {
+            "type": "enumeration",
+            "enum": ["top", "center", "bottom"],
+            "default": "center"
+        }
+        
+    }
+}

@@ -1,5 +1,5 @@
 module.exports = ({env}) => ({
-    url: env('PROD_HEROKU_URL'),
+    url: env('HEROKU_URL'),
     cron: {
         enabled: false,
     },

@@ -4,7 +4,7 @@ import 'react-quill/dist/quill.snow.css';
 
 let Inline = Quill.import('blots/inline');
 
-class Tilt extends Inline{
+class Tilt extends Inline {
     static create(value){
         let node = super.create();
         node.setAttribute('class','tilt');
@@ -16,19 +16,22 @@ Tilt.blotName = 'tilt';
 Tilt.tagName = 'div';
 Quill.register(Tilt);
 
-var tiltButton = document.querySelector('.ql-tilt');
+// var tiltButton = document.querySelector('.ql-tilt');
 
-tiltButton.addEventListener('click', function() {
-        var range = quill.getSelection();
-        if(range){
-            console.log('range is valid');
-            quill.formatText(range,'tilt');
-        }else{
-            console.log('it it invalid');
-        }
+// tiltButton.addEventListener('click', function() {
+//         var range = quill.getSelection();
+//         if( range ){
+//             quill.formatText(range,'tilt');
+//         }
+//     }
+// );
 
-    }
-);
+
+let BlockEmbed = Quill.import('blots/block/embed');
+
+class DividerBlot extends BlockEmbed { }
+DividerBlot.blotName = 'divider';
+DividerBlot.tagName = 'hr';
 
 const Editor = ({onChange, name, value}) => {
     const modules = {
@@ -56,6 +59,19 @@ const Editor = ({onChange, name, value}) => {
           }
     };
 
+    var tiltButton = document.querySelector('.ql-tilt');
+
+tiltButton.addEventListener('click', function() {
+        var range = quill.getSelection();
+        if(range){
+            console.log('range is valid');
+            quill.formatText(range,'tilt');
+        }else{
+            console.log('it it invalid');
+        }
+
+    }
+);
     const formats = [
         'header',
         'font',

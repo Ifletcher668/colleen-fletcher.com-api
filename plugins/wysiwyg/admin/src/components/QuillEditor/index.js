@@ -5,7 +5,8 @@ import 'react-quill/dist/quill.snow.css';
 const Editor = ({onChange, name, value}) => {
     const modules = {
         toolbar: [
-            [{header: []}, {font: []}],
+            [{header: [1, 2, 3, 4, 5, 6, false]}],
+            [{font: []}],
             [{size: []}],
             ['bold', 'italic', 'underline', 'strike', 'blockquote'],
             [

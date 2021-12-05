@@ -32,6 +32,12 @@ Quill.register(DividerBlot);
 //     quill.setSelection(range.index + 2, Quill.sources.SILENT);
 //   });
 
+function insertStar() {
+    const cursorPosition = this.quill.getSelection().index;
+    this.quill.insertText(cursorPosition, "★");
+    this.quill.setSelection(cursorPosition + 1);
+  }
+
 const Editor = ({onChange, name, value}) => {
     const modules = {
         toolbar: [
@@ -47,6 +53,9 @@ const Editor = ({onChange, name, value}) => {
             ],
             ['link', 'clean'],
         ],
+        handlers: {
+            insertStar
+        },
         clipboard: {
             // toggle to add extra line breaks when pasting HTML:
             matchVisual: false,

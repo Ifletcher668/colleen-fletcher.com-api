@@ -1,3 +1,4 @@
+import Quill from 'quill';
 import divider from '../Modules/divider';
 
 const Module = Quill.import('core/module')

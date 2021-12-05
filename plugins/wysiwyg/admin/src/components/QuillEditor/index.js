@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactQuill, { Quill } from 'react-quill';
+import './ToolbarButtons/Divider';
 import 'react-quill/dist/quill.snow.css';
 import './style.css';
 
@@ -18,21 +19,11 @@ Tilt.tagName = 'span';
 Quill.register(Tilt);
 
 
-
-let BlockEmbed = Quill.import('blots/block/embed');
-
-class DividerBlot extends BlockEmbed { }
-DividerBlot.blotName = 'divider';
-DividerBlot.tagName = 'hr';
-Quill.register(DividerBlot);
-
-
 const Editor = ({onChange, name, value}) => {
     const modules = {
         toolbar: [
             [{ header: [1, 2, 3, 4, 5, 6, false] }],
             [{ font: [] }, { size: [] }, 'tilt'],
-            [],
             ['bold', 'italic', 'underline', 'strike', 'blockquote', 'divider'],
             [
                 { list: 'ordered' },

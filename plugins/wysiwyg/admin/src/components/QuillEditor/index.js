@@ -7,7 +7,6 @@ let Inline = Quill.import('blots/inline');
 class Tilt extends Inline {
     static create(){
         let node = super.create();
-        console.log(node)
         node.setAttribute('class','tilt');
         return node;
     }
@@ -17,15 +16,15 @@ Tilt.blotName = 'tilt';
 Tilt.tagName = 'span';
 Quill.register(Tilt);
 
-// var tiltButton = document.querySelector('.ql-tilt');
+var tiltButton = document.querySelector('.ql-tilt');
 
-// tiltButton.addEventListener('click', function() {
-//         var range = quill.getSelection();
-//         if( range ){
-//             quill.formatText(range,'tilt');
-//         }
-//     }
-// );
+tiltButton.addEventListener('click', function() {
+        var range = quill.getSelection();
+        if( range ){
+            quill.formatText(range,'tilt');
+        }
+    }
+);
 
 
 let BlockEmbed = Quill.import('blots/block/embed');

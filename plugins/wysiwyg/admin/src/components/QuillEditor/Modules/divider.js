@@ -7,11 +7,11 @@ class Divider extends BlockEmbed {
     static create (value) {
         const parentNode = super.create(value)
         parentNode.setAttribute('contenteditable', false)
-        parentNode.setAttribute('class',`ql-divider ql-divider-${value}`);
+        parentNode.innerHTML = `<hr class='ql-divider ql-divider-${value}' />'`
         return parentNode
     }
 }
 
 Divider.blotName = 'divider'
-Divider.tagName = 'hr'
+Divider.tagName = 'p'
 export default Divider;

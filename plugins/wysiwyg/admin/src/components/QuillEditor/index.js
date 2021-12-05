@@ -26,11 +26,6 @@ DividerBlot.blotName = 'divider';
 DividerBlot.tagName = 'hr';
 Quill.register(DividerBlot);
 
-function insertStar() {
-    const cursorPosition = this.quill.getSelection().index;
-    this.quill.insertText(cursorPosition, "★");
-    this.quill.setSelection(cursorPosition + 1);
-  }
 
 const Editor = ({onChange, name, value}) => {
     const modules = {
@@ -45,11 +40,9 @@ const Editor = ({onChange, name, value}) => {
                 { indent: '-1' },
                 { indent: '+1' },
             ],
-            ['link', 'clean', 'insertStar'],
+            ['link', 'clean'],
         ],
-        handlers: {
-            insertStar
-        },
+        
         clipboard: {
             // toggle to add extra line breaks when pasting HTML:
             matchVisual: false,

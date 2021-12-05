@@ -6,11 +6,6 @@ const DEFAULT = {
     cssText: 'border: none;border-bottom: 1px inset;',
     icon: '<svg class="icon" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path class="ql-fill" d="M64 464h896v96H64v-96zM224 96v160h576V96h96v256H128V96h96z m576 832v-160H224v160H128v-256h768v256h-96z"></path></svg>'
 }
-
-let range = quill.getSelection(true);
-quill.insertText(range.index, '\n', Quill.sources.USER);
-quill.insertEmbed(range.index + 1, 'divider', true, Quill.sources.USER);
-quill.setSelection(range.index + 2, Quill.sources.SILENT);
 class DividerToolbar extends Module {
     constructor (quill, options) {
         super(quill, options)

@@ -22,7 +22,7 @@ const Toolbar = () => (
             <select className="ql-font">
                 <option value="sans-serif" />
                 <option value="serif" />
-                <option value="mono" />
+                <option value="monospace" />
             </select>
 
             <select class="ql-size">
@@ -40,7 +40,6 @@ const Toolbar = () => (
             <button className="ql-strike" />
             <button className="ql-blockquote" />
             <select className="ql-divider ql-header">
-                <option value="standard">Standard</option>
                 <option value="fancy">Fancy</option>
                 <option selected />
             </select>

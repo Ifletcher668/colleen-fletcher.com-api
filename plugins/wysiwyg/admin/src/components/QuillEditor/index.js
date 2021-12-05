@@ -7,6 +7,7 @@ let Inline = Quill.import('blots/inline');
 class Tilt extends Inline {
     static create(){
         let node = super.create();
+        console.log(node)
         node.setAttribute('class','tilt');
         return node;
     }

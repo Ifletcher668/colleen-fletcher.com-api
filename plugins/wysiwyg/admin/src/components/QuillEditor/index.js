@@ -5,7 +5,7 @@ import 'react-quill/dist/quill.snow.css';
 let Inline = Quill.import('blots/inline');
 
 class Tilt extends Inline {
-    static create(value){
+    static create(){
         let node = super.create();
         node.setAttribute('class','tilt');
         return node;
@@ -13,7 +13,7 @@ class Tilt extends Inline {
 };
 
 Tilt.blotName = 'tilt';
-Tilt.tagName = 'div';
+Tilt.tagName = 'span';
 Quill.register(Tilt);
 
 // var tiltButton = document.querySelector('.ql-tilt');
@@ -32,6 +32,7 @@ let BlockEmbed = Quill.import('blots/block/embed');
 class DividerBlot extends BlockEmbed { }
 DividerBlot.blotName = 'divider';
 DividerBlot.tagName = 'hr';
+Quill.register(DividerBlot);
 
 const Editor = ({onChange, name, value}) => {
     const modules = {
@@ -63,6 +64,8 @@ const Editor = ({onChange, name, value}) => {
         'header',
         'font',
         'size',
+        'tilt',
+        'divider',
         'bold',
         'italic',
         'underline',

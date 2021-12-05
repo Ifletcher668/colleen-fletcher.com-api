@@ -19,7 +19,9 @@
         "slug": {
             "type": "uid",
             "required": true,
-            "maxLength": 150
+            "targetField": "title",
+            "maxLength": 200,
+            "minLength": 10
         },
         "preview": {
             "type": "component",

@@ -15,5 +15,5 @@ class Divider extends BlockEmbed {
 
 Divider.blotName = 'divider'
 Divider.tagName = 'p'
-Divider.whitelist = whitelist;
+// Divider.whitelist = whitelist;
 export default Divider;

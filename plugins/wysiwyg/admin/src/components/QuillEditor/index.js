@@ -22,18 +22,7 @@ Quill.register(Tilt);
 
 const Editor = ({onChange, name, value}) => {
     const modules = {
-        // toolbar: [
-        //     [{ header: [1, 2, 3, 4, 5, 6, false] }],
-        //     [{ font: [] }, { size: [] }, 'tilt'],
-        //     ['bold', 'italic', 'underline', 'strike', 'blockquote', 'divider'],
-        //     [
-        //         { list: 'ordered' },
-        //         { list: 'bullet' },
-        //         { indent: '-1' },
-        //         { indent: '+1' },
-        //     ],
-        //     ['link', 'clean'],
-        // ],
+        toolbar: '#toolbar',
         clipboard: {
             // toggle to add extra line breaks when pasting HTML:
             matchVisual: false,

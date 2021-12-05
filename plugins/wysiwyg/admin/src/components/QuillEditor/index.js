@@ -39,7 +39,7 @@ const Editor = ({onChange, name, value}) => {
             [{ header: [1, 2, 3, 4, 5, 6, false] }],
             [{ font: [] }, { size: [] }, 'tilt'],
             [],
-            ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+            ['bold', 'italic', 'underline', 'strike', 'blockquote', 'divider'],
             [
                 { list: 'ordered' },
                 { list: 'bullet' },
@@ -59,19 +59,6 @@ const Editor = ({onChange, name, value}) => {
           }
     };
 
-    var tiltButton = document.querySelector('.ql-tilt');
-
-tiltButton.addEventListener('click', function() {
-        var range = quill.getSelection();
-        if(range){
-            console.log('range is valid');
-            quill.formatText(range,'tilt');
-        }else{
-            console.log('it it invalid');
-        }
-
-    }
-);
     const formats = [
         'header',
         'font',

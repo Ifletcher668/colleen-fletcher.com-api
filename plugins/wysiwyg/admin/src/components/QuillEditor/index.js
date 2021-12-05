@@ -16,15 +16,6 @@ Tilt.blotName = 'tilt';
 Tilt.tagName = 'span';
 Quill.register(Tilt);
 
-var tiltButton = document.querySelector('.ql-tilt');
-
-tiltButton.addEventListener('click', function() {
-        var range = quill.getSelection();
-        if( range ){
-            quill.formatText(range,'tilt');
-        }
-    }
-);
 
 
 let BlockEmbed = Quill.import('blots/block/embed');
@@ -33,6 +24,13 @@ class DividerBlot extends BlockEmbed { }
 DividerBlot.blotName = 'divider';
 DividerBlot.tagName = 'hr';
 Quill.register(DividerBlot);
+
+// $('#divider-button').click(function() {
+//     let range = quill.getSelection(true);
+//     quill.insertText(range.index, '\n', Quill.sources.USER);
+//     quill.insertEmbed(range.index + 1, 'divider', true, Quill.sources.USER);
+//     quill.setSelection(range.index + 2, Quill.sources.SILENT);
+//   });
 
 const Editor = ({onChange, name, value}) => {
     const modules = {

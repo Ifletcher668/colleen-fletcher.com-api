@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactQuill from 'react-quill';
+import ReactQuill, { Quill } from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 let Inline = Quill.import('blots/inline');
@@ -79,7 +79,7 @@ const Editor = ({onChange, name, value}) => {
             value={value}
             modules={modules}
             formats={formats}
-            onChange={(content, event, editor) => {
+            onChange={(content) => {
                 onChange({target: {name, value: content}});
             }}
         />

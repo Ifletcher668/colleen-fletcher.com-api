@@ -6,12 +6,12 @@ class Divider extends BlockEmbed {
     static create (config) {
         const parentNode = super.create()
         parentNode.setAttribute('contenteditable', false)
-        parentNode.innerHTML = `<hr style="${config.cssText}">`
+        parentNode.innerHTML = `<hr class="${config.option}">`
         return parentNode
     }
 }
 
 Divider.blotName = 'divider'
-Divider.tagName = 'hr'
-Divider.className = 'quill-hr'
+Divider.tagName = 'p'
+Divider.className = 'ql-divider'
 export default Divider;

@@ -3,9 +3,7 @@ import Quill from 'quill';
 const BlockEmbed = Quill.import('blots/block/embed')
 
 class Divider extends BlockEmbed {
-    static create (config) {
-        console.log('config');
-        console.log(config);
+    static create (domNode) {
         const parentNode = super.create()
         parentNode.setAttribute('contenteditable', false)
         parentNode.innerHTML = `<hr class="${config.option}">`

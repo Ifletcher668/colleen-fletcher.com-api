@@ -4,6 +4,7 @@ const BlockEmbed = Quill.import('blots/block/embed')
 
 class Divider extends BlockEmbed {
     static create (config) {
+        console.log('config');
         console.log(config);
         const parentNode = super.create()
         parentNode.setAttribute('contenteditable', false)

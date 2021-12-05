@@ -2,6 +2,20 @@ import React from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
+let Inline = Quill.import('blots/inline');
+
+class Tilt extends Inline{
+    static create(value){
+        let node = super.create();
+        node.setAttribute('class','tilt');
+        return node;
+    }
+};
+
+Tilt.blotName = 'tilt';
+Tilt.tagName = 'div';
+Quill.register(Tilt);
+
 var tiltButton = document.querySelector('.ql-tilt');
 
 tiltButton.addEventListener('click', function() {
@@ -15,23 +29,6 @@ tiltButton.addEventListener('click', function() {
 
     }
 );
-
-let Inline = Quill.import('blots/inline');
-
-class Tilt extends Inline{    
-    
-    static create(value){
-        let node = super.create();
-        node.setAttribute('class','tilt');
-        return node;    
-    } 
-
-    
-}
-
-Tilt.blotName = 'tilt';
-Tilt.tagName = 'div';
-Quill.register(Tilt);
 
 const Editor = ({onChange, name, value}) => {
     const modules = {

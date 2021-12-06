@@ -39,7 +39,7 @@ const Toolbar = () => (
             <button className="ql-underline" />
             <button className="ql-strike" />
             <button className="ql-blockquote" />
-            {/* <button className="ql-divider" /> */}
+            <button className="ql-divider" />
         </Section>
 
         <Section>

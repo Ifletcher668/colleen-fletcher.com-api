@@ -10,7 +10,7 @@ let Inline = Quill.import('blots/inline');
 class Tilt extends Inline {
     static create(){
         let node = super.create();
-        node.setAttribute('class','tilt');
+        node.setAttribute('class', 'tilt');
         return node;
     }
 };
@@ -39,7 +39,7 @@ const Editor = ({onChange, name, value}) => {
         'font',
         'size',
         'tilt',
-        'divider',
+        // 'divider',
         'bold',
         'italic',
         'underline',

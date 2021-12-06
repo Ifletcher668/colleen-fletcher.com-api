@@ -8,13 +8,13 @@ class Divider extends BlockEmbed {
         if (!whitelist.includes(value)) value = 'standard';
         const parentNode = super.create();
         parentNode.setAttribute('contenteditable', false);
-        parentNode.innerHTML = `<hr class='ql-divider-${value}' />`;
+        parentNode.setAttribute ('class',`ql-divider${value}`);
         return parentNode;
     }
 }
 
 Divider.blotName = 'divider';
-Divider.tagName = 'p';
+Divider.tagName = 'hr';
 Divider.whitelist = whitelist;
 
 export default Divider;

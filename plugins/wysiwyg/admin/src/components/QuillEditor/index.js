@@ -39,7 +39,7 @@ const Editor = ({onChange, name, value}) => {
         'font',
         'size',
         'tilt',
-        // 'divider',
+        'divider',
         'bold',
         'italic',
         'underline',

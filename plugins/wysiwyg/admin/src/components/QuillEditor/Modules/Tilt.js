@@ -7,10 +7,10 @@ class TiltToolbar extends Module {
         super(quill, options)
         this.quill = quill
         this.toolbar = quill.getModule('toolbar')
-        this.toolbar.addHandler('tilt', this.dividerHandler.bind(this))
+        this.toolbar.addHandler('tilt', this.tiltHandler.bind(this))
     }
 
-    dividerHandler () {
+    tiltHandler () {
         const getSelection = this.quill.getSelection() || {}
         let selection = getSelection.index || this.quill.getLength()
         const [leaf] = this.quill.getLeaf(selection - 1)

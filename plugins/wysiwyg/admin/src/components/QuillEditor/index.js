@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import ReactQuill from 'react-quill';
 import './Modules/Divider';
+import './Modules/Tilt';
 import 'react-quill/dist/quill.snow.css';
 import './style.css';
 import Toolbar from './Toolbar';

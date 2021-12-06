@@ -1,5 +1,6 @@
 import Quill from 'quill';
 
+
 const Inline = Quill.import('blots/inline');
 const whitelist = ['even', 'up', 'down'];
 

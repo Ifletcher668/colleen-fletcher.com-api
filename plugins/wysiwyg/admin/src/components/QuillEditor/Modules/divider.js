@@ -6,7 +6,7 @@ const whitelist = ['standard', 'fancy'];
 class Divider extends BlockEmbed {
     static create (value) {
         if (!whitelist.includes(value)) value = 'standard';
-        const parentNode = super.create(value)
+        const parentNode = super.create()
         parentNode.setAttribute('contenteditable', false)
         parentNode.innerHTML = `<hr class='ql-divider ql-divider-${value}' />`
         return parentNode
@@ -15,5 +15,5 @@ class Divider extends BlockEmbed {
 
 Divider.blotName = 'divider'
 Divider.tagName = 'p'
-// Divider.whitelist = whitelist;
+Divider.whitelist = whitelist;
 export default Divider;

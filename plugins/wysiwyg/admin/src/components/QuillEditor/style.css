@@ -1,3 +1,3 @@
-.ql-divider, .ql-picker-item:before, .ql-picker-label:before {
-    content: attr(data-label);
+.ql-divider, .ql-divider:before {
+    content: "divider"
 }

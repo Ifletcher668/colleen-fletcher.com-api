@@ -8,7 +8,7 @@ class Divider extends BlockEmbed {
         if (!whitelist.includes(value)) value = 'standard';
         const parentNode = super.create()
         parentNode.setAttribute('contenteditable', false)
-        parentNode.innerHTML = `<hr class='ql-divider ql-divider-${value}' />`
+        parentNode.innerHTML = `<hr class='ql-divider-${value}' />`
         return parentNode
     }
 }

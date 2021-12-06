@@ -1,3 +1,7 @@
-.ql-divider, .ql-divider:before {
-    content: "Divider"
+.ql-divider {
+    width: auto;
+    font-family: 'Lato';
+}
+.ql-divider:before {
+    content: "Divider";
 }

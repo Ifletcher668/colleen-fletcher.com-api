@@ -1,7 +1,12 @@
-.ql-divider {
-    width: auto;
+.ql-divider, .ql-tilt {
+    width: auto !important;
     font-family: 'Lato';
+
 }
 .ql-divider:before {
     content: "Divider";
+}
+
+.ql-tilt:before {
+    content: "Tilt";
 }

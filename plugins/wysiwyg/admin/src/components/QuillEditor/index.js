@@ -1,23 +1,9 @@
 import React, { Fragment } from 'react';
-import ReactQuill, { Quill } from 'react-quill';
-import './ToolbarButtons/Divider';
+import ReactQuill from 'react-quill';
+import './Modules/Divider';
 import 'react-quill/dist/quill.snow.css';
 import './style.css';
 import Toolbar from './Toolbar';
-
-let Inline = Quill.import('blots/inline');
-
-class Tilt extends Inline {
-    static create(){
-        let node = super.create();
-        node.setAttribute('class', 'tilt');
-        return node;
-    }
-};
-
-Tilt.blotName = 'tilt';
-Tilt.tagName = 'span';
-Quill.register(Tilt);
 
 
 const Editor = ({onChange, name, value}) => {

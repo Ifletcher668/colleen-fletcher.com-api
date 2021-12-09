@@ -40,7 +40,6 @@ const Toolbar = () => (
             <button className="ql-strike" />
             <button className="ql-blockquote" />
             <button className="ql-divider" />
-            {/* <button className="ql-tilt" /> TODO: fix tilt format*/} 
         </Section>
 
         <Section>

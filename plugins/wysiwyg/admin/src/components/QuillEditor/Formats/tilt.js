@@ -1,18 +1,17 @@
-import Quill from 'quill';
+import { ClassAttributor, Scope, StyleAttributor } from 'parchment';
+
+const TiltClass = new ClassAttributor('size', 'ql-size', {
+    scope: Scope.INLINE,
+    whitelist: ['small', 'large', 'huge'],
+  });
+
+  const TiltStyle = new StyleAttributor('transform', 'transform', {
+    scope: Scope.INLINE,
+    whitelist: ['rotate(1deg)', 'rotate(-1deg)', 'rotate(0deg)'],
+  });
 
 
-const Inline = Quill.import('blots/inline');
-const whitelist = ['even', 'up', 'down'];
-
-class Tilt extends Inline {
-    static create (value) {
-        if (!whitelist.includes(value)) value = 'even';
-        let node = super.create();
-        node.setAttribute ('class', `ql-divider${value}`);
-        return node;
-    }
-};
-
-Tilt.blotName = 'tilt';
-Tilt.tagName = 'span';
-Quill.register(Tilt);
+Quill.register({
+    TiltStyle,
+    TiltClass,
+});

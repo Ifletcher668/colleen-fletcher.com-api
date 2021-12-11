@@ -5,7 +5,7 @@ import 'react-quill/dist/quill.snow.css';
 import './style.css';
 
 import './Modules/Divider';
-import './formats/tilt';
+import './Formats/tilt';
 
 
 const Editor = ({ onChange, name, value }) => {

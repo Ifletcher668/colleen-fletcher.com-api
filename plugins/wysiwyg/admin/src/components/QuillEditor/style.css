@@ -1,12 +1,39 @@
-.ql-divider, .ql-tilt {
-    width: 98px !important;
-    font-family: 'Lato';
 
-}
-.ql-divider:before {
-    content: "Divider";
+.ql-picker.ql-tilt {
+    width: 98px;
 }
 
-.ql-tilt:before {
-    content: "Tilt";
+.ql-picker.ql-tilt .ql-picker-label:before {
+    content: attr(data-value);
+}
+.ql-picker.ql-tilt .ql-picker-options .ql-picker-item:before {
+    content: attr(data-value);
+}
+
+.ql-tilt-up {
+    color: red;
+}
+.ql-tilt-down {
+    color: blue;
+}
+
+.ql-picker.ql-divider {
+    width: 98px;
+}
+
+.ql-picker.ql-divider .ql-picker-label:before {
+    content: attr(data-value);
+}
+.ql-picker.ql-divider .ql-picker-options .ql-picker-item:before {
+    content: attr(data-value);
+}
+
+.ql-divider-standard {
+    border: solid 2px #664838;
+}
+.ql-divider-fancy {
+    border: solid 2px #7bd0f7;
+}
+.ql-divider-fancy:before,.ql-divider-fancy:after {
+    content:"⚘";
 }

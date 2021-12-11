@@ -1,16 +1,19 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import ReactQuill from 'react-quill';
-import './Modules/Divider';
+
 import 'react-quill/dist/quill.snow.css';
 import './style.css';
-import Toolbar from './Toolbar';
 
-const Editor = ({onChange, name, value}) => {
-    const toolbar = [
+import './Modules/Divider';
+import './formats/tilt';
+
+
+const Editor = ({ onChange, name, value }) => {
+    const toolbar = [ // toolbar container
         [{header: [1, 2, 3, 4, 5, 6, false]}],
         [{font: []}],
         [{size: []}],
-        ['bold', 'italic', 'underline', 'strike', 'blockquote', 'divider'],
+        ['bold', 'italic', 'underline', 'strike', 'blockquote', { divider: ['[Divider]','fancy','standard'] }, { tilt: ['[Tilt]','up','down'] }],
         [{list: 'ordered'}, {list: 'bullet'}, {indent: '-1'}, {indent: '+1'}],
         ['link', 'clean'],
     ];
@@ -30,14 +33,13 @@ const Editor = ({onChange, name, value}) => {
         toolbar,
         clipboard,
         history,
+        divider: true,
     };
 
     const formats = [
         'header',
         'font',
         'size',
-        'tilt',
-        'divider',
         'bold',
         'italic',
         'underline',
@@ -49,6 +51,9 @@ const Editor = ({onChange, name, value}) => {
         'link',
         'image',
         'video',
+        // custom formats
+        'tilt',
+        'divider',
     ];
 
     return (

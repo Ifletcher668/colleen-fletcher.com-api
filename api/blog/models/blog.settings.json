@@ -1,47 +1,48 @@
 {
-    "kind": "collectionType",
-    "collectionName": "blogs",
-    "info": {
-        "name": "Blog",
-        "description": ""
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "name": "Blog",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "maxLength": 150,
+      "required": true
     },
-    "options": {
-        "increments": true,
-        "timestamps": true,
-        "draftAndPublish": false
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 200,
+      "minLength": 10,
+      "targetField": "name"
     },
-    "attributes": {
-        "name": {
-            "type": "string",
-            "maxLength": 150,
-            "required": true
-        },
-        "slug": {
-            "type": "uid",
-            "required": true,
-            "targetField": "title",
-            "maxLength": 200,
-            "minLength": 10
-        },
-        "preview": {
-            "type": "component",
-            "repeatable": false,
-            "component": "general.preview"
-        },
-        "blog_posts": {
-            "via": "blog",
-            "collection": "blog-post"
-        },
-        "is_blog": {
-            "type": "boolean",
-            "default": true,
-            "required": false
-        },
-        "seo": {
-            "type": "component",
-            "repeatable": false,
-            "component": "general.seo",
-            "required": false
-        }
+    "preview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.preview",
+      "required": false
+    },
+    "blog_posts": {
+      "via": "blog",
+      "collection": "blog-post"
+    },
+    "is_blog": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.seo",
+      "required": false
     }
+  }
 }

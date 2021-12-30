@@ -9,23 +9,26 @@
     "heading": {
       "type": "component",
       "repeatable": false,
-      "component": "text.heading",
+      "component": "text.paragraph",
       "required": false
     },
     "text": {
       "type": "component",
       "repeatable": false,
-      "component": "text.paragraph"
+      "component": "text.paragraph",
+      "required": false
     },
     "image": {
       "type": "component",
       "repeatable": false,
-      "component": "media.single-image"
+      "component": "media.single-image",
+      "required": false
     },
     "button": {
       "type": "component",
       "repeatable": false,
-      "component": "widget.button"
+      "component": "widget.button",
+      "required": false
     }
   }
 }

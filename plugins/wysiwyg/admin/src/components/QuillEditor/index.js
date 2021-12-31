@@ -7,14 +7,28 @@ import './style.css';
 import './Modules/Divider';
 import './Formats/tilt';
 
-
-const Editor = ({ onChange, name, value }) => {
-    const toolbar = [ // toolbar container
+const Editor = ({onChange, name, value}) => {
+    const toolbar = [
+        // toolbar container
         [{header: [1, 2, 3, 4, 5, 6, false]}],
         [{font: []}],
         [{size: []}],
-        ['bold', 'italic', 'underline', 'strike', 'blockquote', { divider: ['[Divider]','fancy','standard'] }, { tilt: ['[Tilt]','up','down'] }],
-        [{list: 'ordered'}, {list: 'bullet'}, {indent: '-1'}, {indent: '+1'}],
+        [
+            'bold',
+            'italic',
+            'underline',
+            'strike',
+            'blockquote',
+            {divider: ['[Divider]', 'fancy', 'standard']},
+            {tilt: ['[Tilt]', 'up', 'down']},
+        ],
+        [
+            {list: 'ordered'},
+            {list: 'bullet'},
+            {indent: '-1'},
+            {indent: '+1'},
+            {align: []},
+        ],
         ['link', 'clean'],
     ];
 
@@ -51,6 +65,7 @@ const Editor = ({ onChange, name, value }) => {
         'link',
         'image',
         'video',
+        'align',
         // custom formats
         'tilt',
         'divider',

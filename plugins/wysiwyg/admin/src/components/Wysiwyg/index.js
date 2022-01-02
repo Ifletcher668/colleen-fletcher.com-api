@@ -1,58 +1,56 @@
-import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
-import {Button} from '@buffetjs/core';
-import {Label, Description, ErrorMessage} from '@buffetjs/styles';
+import React, { useState } from 'react';
+import { Button } from '@buffetjs/core';
+import { Label, Description, ErrorMessage } from '@buffetjs/styles';
 import Editor from '../QuillEditor';
 import MediaLib from '../MediaLib';
 
-const Wysiwyg = ({inputDescription, error, label, name, onChange, value}) => {
-    const [isOpen, setIsOpen] = useState(false);
+const Wysiwyg = ({ inputDescription, error, label, name, onChange, value }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const handleChange = data => {
-        if (data.mime.includes('image')) {
-            const imgTag = `<p><img src="${data.url}" caption="${data.caption} alt="${data.alternativeText}"></img></p>`;
-            const newValue = value ? `${value}${imgTag}` : imgTag;
+  const handleChange = data => {
+    if (!data.mime.includes('image')) return;
 
-            onChange({target: {name, value: newValue}});
-        }
-        // add support for videos or files
-    };
+    const imgTag = `<p><img src="${data.url}" caption="${data.caption}" alt="${data.alternativeText}"></img></p>`;
+    const newValue = value ? `${value}${imgTag}` : imgTag;
 
-    const handleToggle = () => setIsOpen(prev => !prev);
+    onChange({ target: { name, value: newValue } });
+  };
 
-    const hasError = Boolean(error);
+  const handleToggle = () => setIsOpen(prev => !prev);
 
-    return (
-        <div
-            style={{
-                marginBottom: '1.6rem',
-                fontSize: '1.3rem',
-                fontFamily: 'Lato',
-            }}
-        >
-            <div style={{position: 'absolute', right: '15px', top: '-10px'}}>
-                <button color="primary" onClick={handleToggle}>
-                    MediaLib
-                </button>
-            </div>
-            <label htmlFor={name} style={{marginBottom: 10}}>
-                {label}
-            </label>
+  const hasError = Boolean(error);
 
-            <Editor name={name} onChange={onChange} value={value} />
+  return (
+    <div
+      style={{
+        marginBottom: '2rem',
+        fontSize: '1.4rem',
+        fontFamily: 'Arial',
+      }}
+    >
+      <div style={{ position: 'absolute', right: '15px', top: '-10px' }}>
+        <Button color="primary" onClick={handleToggle}>
+          MediaLib
+        </Button>
+      </div>
+      <Label htmlFor={name} style={{ marginBottom: 10 }}>
+        {label}{' '}
+      </Label>
 
-            {!hasError && inputDescription && (
-                <Description>{inputDescription}</Description>
-            )}
-            {hasError && <ErrorMessage>{error}</ErrorMessage>}
+      <Editor name={name} onChange={onChange} value={value} />
 
-            <MediaLib
-                onToggle={handleToggle}
-                isOpen={isOpen}
-                onChange={handleChange}
-            />
-        </div>
-    );
+      {!hasError && inputDescription && (
+        <Description>{inputDescription}</Description>
+      )}
+      {hasError && <ErrorMessage>{error}</ErrorMessage>}
+
+      <MediaLib
+        onToggle={handleToggle}
+        isOpen={isOpen}
+        onChange={handleChange}
+      />
+    </div>
+  );
 };
 
 export default Wysiwyg;

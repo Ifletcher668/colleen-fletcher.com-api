@@ -11,9 +11,7 @@ import './Formats/tilt';
 const Editor = ({onChange, name, value}) => {
     const toolbar = [
         // toolbar container
-        [{header: [1, 2, 3, 4, 5, 6, false]}],
-        [{font: []}],
-        [{size: []}],
+        [{header: [1, 2, 3, 4, 5, 6, false]}, {font: []}, {size: []}],
         [
             'bold',
             'italic',

@@ -1,5 +1,5 @@
 import Quill from 'quill';
-import divider from '../Formats/divider';
+import fancyDivider from '../Formats/fancyDivider';
 
 const Module = Quill.import('core/module');
 class DividerToolbar extends Module {
@@ -7,21 +7,21 @@ class DividerToolbar extends Module {
         super(quill, options);
         this.quill = quill;
         this.toolbar = quill.getModule('toolbar');
-        this.toolbar.addHandler('divider', this.dividerHandler.bind(this));
+        this.toolbar.addHandler('fancyDivider', this.dividerHandler.bind(this));
     }
 
     dividerHandler(value) {
         let cursorPosition = this.quill.getSelection().index;
         const [leaf] = this.quill.getLeaf(cursorPosition - 1);
 
-        if (leaf instanceof divider) {
+        if (leaf instanceof fancyDivider) {
             this.quill.insertText(cursorPosition, '\n', Quill.sources.USER);
             this.quill.setSelection(cursorPosition++);
         }
         this.options.value = value
         this.quill.insertEmbed(
             cursorPosition,
-            'divider',
+            'fancyDivider',
             this.options,
             Quill.sources.USER,
         );
@@ -32,7 +32,7 @@ class DividerToolbar extends Module {
     }
 }
 
-Quill.register(divider);
-Quill.register('modules/divider', DividerToolbar);
+Quill.register(fancyDivider);
+Quill.register('modules/fancyDivider', DividerToolbar);
 
 export default DividerToolbar;

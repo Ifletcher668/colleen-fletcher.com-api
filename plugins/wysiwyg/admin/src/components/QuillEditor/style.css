@@ -17,23 +17,25 @@
     color: blue;
 }
 
-.ql-picker.ql-divider {
-    width: 98px;
-}
-
-.ql-picker.ql-divider .ql-picker-label:before {
-    content: attr(data-value);
-}
-.ql-picker.ql-divider .ql-picker-options .ql-picker-item:before {
-    content: attr(data-value);
-}
-
 .ql-divider-standard {
     border: solid 2px #664838;
 }
 .ql-divider-fancy {
     border: solid 2px #7bd0f7;
 }
-.ql-divider-fancy:before,.ql-divider-fancy:after {
+
+.ql-fancyDivider,.ql-divider {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.ql-divider:before {
+    content:"—";
+    font-size: 20px;
+}
+
+.ql-fancyDivider:before {
     content:"⚘";
+    font-size: 20px;
 }

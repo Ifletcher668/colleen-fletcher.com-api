@@ -4,6 +4,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './style.css';
 
+import './Modules/FancyDivider';
 import './Modules/Divider';
 import './Formats/tilt';
 
@@ -19,16 +20,12 @@ const Editor = ({onChange, name, value}) => {
             'underline',
             'strike',
             'blockquote',
-            {divider: ['[Divider]', 'fancy', 'standard']},
+            'divider',
+            'fancyDivider',
             {tilt: ['[Tilt]', 'up', 'down']},
         ],
-        [
-            {list: 'ordered'},
-            {list: 'bullet'},
-            {indent: '-1'},
-            {indent: '+1'},
-            {align: []},
-        ],
+        [{align: []}, {indent: '-1'}, {indent: '+1'}],
+        [{list: 'ordered'}, {list: 'bullet'}],
         ['link', 'clean'],
     ];
 
@@ -48,6 +45,7 @@ const Editor = ({onChange, name, value}) => {
         clipboard,
         history,
         divider: true,
+        fancyDivider: true,
     };
 
     const formats = [
@@ -69,6 +67,7 @@ const Editor = ({onChange, name, value}) => {
         // custom formats
         'tilt',
         'divider',
+        'fancyDivider',
     ];
 
     return (

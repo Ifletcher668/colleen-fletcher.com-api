@@ -7,4 +7,18 @@ module.exports = ({env}) => ({
             api_secret: env('CLOUDINARY_SECRET'),
         },
     },
+    comments: {
+        enableUsers: false,
+        badWords: false,
+        // moderatorRoles: ["Authenticated"],
+        relatedContentTypes: {
+            blog_posts: {
+                uuid: 'application::blog_posts.blog_posts',
+                __contentType: '',
+                contentManager: true,
+                key: 'comments',
+                value: 'id'
+            }
+        }
+      },
 });

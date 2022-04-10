@@ -82,6 +82,11 @@
       "repeatable": false,
       "component": "general.seo",
       "required": false
+    },
+    "comments": {
+      "plugin": "comments",
+      "collection": "comment",
+      "via": "related"
     }
   }
 }

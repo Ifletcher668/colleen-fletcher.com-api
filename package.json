@@ -16,7 +16,7 @@
         "pg": "^8.6.0",
         "pg-connection-string": "2.4.0",
         "react-quill": "^2.0.0-beta.4",
-        "strapi": "3.6.9",
+        "strapi": "3.6.10",
         "strapi-admin": "3.6.9",
         "strapi-connector-bookshelf": "3.6.9",
         "strapi-plugin-comments": "1.0.4",
